@@ -48,7 +48,7 @@ export default class container extends Component {
         }, 5000)
     }
 
-    /* THIS IS NOT PART OF THE ALERT, IS JUST AN EXAMPLE OF HOW TO USE IT */
+    /* THIS FUNCTION IS NOT PART OF THE ALERT, IS JUST AN EXAMPLE OF HOW TO USE IT */
     getProducts = () => {
         fetch(API)
         .then(res => res.json())
@@ -67,7 +67,7 @@ export default class container extends Component {
         }
         return (
             <div>
-                <Alert data={this.state.alert} className='alert' style={alertStyle}/>
+                <Alert data={this.state.alert} className='alert-custom' style={alertStyle}/>
             </div>
         )
     }

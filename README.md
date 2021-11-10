@@ -60,7 +60,7 @@ setAlert = (msg, type = '') => {
     //The alert only lasts 5 seconds, you can modify this value (remember that time is in milliseconds)
 }
 ```
-- The component name _"Alert"_ or how do you imported it inside of your container and it requires a prop name _"data"_ that recives the alert values
+- The component name _"Alert"_ or how do you imported it inside of your container and it requires a prop name _"data"_ that recives the alert values saved in the state
 ```js
 render(){
     return (
@@ -79,18 +79,21 @@ You call the function _setAlert()_ where you want to show a message, remeber use
 
 `this.setAlert()`
 
-But this is not sufficient beacuse it recives two parameters
+But this is not sufficient because it recives two parameters:
 - The first one is the message you want to show
 - The second one is the _type_ of the message, it means the background color it will show, it can be _"success"_, _"warning"_ , _"danger"_ or the color you want to use (in hexadecimal , _#fff_ for example)
 
-`this.setAlert('This is a message', 'success')`
+```js
+this.setAlert('This is a message', 'success');
+this.setAlert('This is a custom color message', '#218bff');
+```
 
 The colors of each _type_ are:
 - _"success"_: _#339900_
 - _"warning"_: _#ffcc00_
 - _"danger"_: _#cc3300_
 
-The default color is red _(#cc3300)_ so you don't need to write the second parameter for an "danger" alert
+The default color is red _(#cc3300)_ so you don't need to write the second parameter for a "danger" alert
 
 `this.setAlert('This is an danger alert')`
 
@@ -100,7 +103,7 @@ When you call the component (`<Alert data={this.state.alert}/>`) you can pass so
 
 `<Alert data={this.state.alert} className='alert-custom'/>`
 
-- A style
+- or a style
 
 `<Alert data={this.state.alert} style={{backgroundColor: '#cc3300'}}/>`
 
