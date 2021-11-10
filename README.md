@@ -1,6 +1,6 @@
 # Alert Component using React
 This is an alert component using React with classes that I made for a proyect I'm working on and maybe it can help you to use in your proyect or you can give me a feedback.
-## How do i configure it?
+## How do I configure it?
 
 ### Requirements
 It consists of a container (where is the alert located), the alert code (file or in the same container) and the css, feel free to edit as you like.
@@ -18,7 +18,7 @@ Import the component in your proyect with the name _"Alert"_ of as you want name
 The container should have :
 - A state name _"alert"_ 
 ```js
-this.state = {
+state = {
     //This are the default values
     alert: {
         show: false,
@@ -40,7 +40,8 @@ setAlert = (msg, type = '') => {
     setTimeout(() => {
         //For animations
         const alert = document.querySelector('.scale-in-center');
-        //When you click more than once while the alert is running, it can cause an error, so it as a try - catch to not mess up the page
+        //When you click more than once while the alert is running, 
+        //it can cause an error, so it as a try - catch to not mess up the page
         try {
             alert.classList.add('scale-out-center');
             //Clear alert values
@@ -57,7 +58,7 @@ setAlert = (msg, type = '') => {
     //The alert only lasts 5 seconds, you can modify this value (remember that time is in milliseconds)
 }
 ```
-- The component name _"Alert"_ or how do you imported it inside of your container and it requires a props name _"data"_ that recives the alert values
+- The component name _"Alert"_ or how do you imported it inside of your container and it requires a prop name _"data"_ that recives the alert values
 ```js
 render(){
     return (
@@ -78,7 +79,7 @@ You call the function _setAlert()_ where you want to show a message, remeber use
 
 But this is not sufficient beacuse it recives two parameters
 - The first one is the message you want to show
-- The second one is the type of the message, it means the background color it will show, it can be _"success"_, _"warning"_ , _"danger"_ or the color you want to use (in hexadecimal , _#fff_ for example)
+- The second one is the _type_ of the message, it means the background color it will show, it can be _"success"_, _"warning"_ , _"danger"_ or the color you want to use (in hexadecimal , _#fff_ for example)
 
 `this.setAlert('This is a message', 'success')`
 
@@ -87,11 +88,11 @@ The colors of each _type_ are:
 - _"warning"_: _#ffcc00_
 - _"danger"_: _#cc3300_
 
-The default color is red (#cc3300) so you don't need to write the second parameter for an "danger" alert
+The default color is red _(#cc3300)_ so you don't need to write the second parameter for an "danger" alert
 
 `this.setAlert('This is an danger alert')`
 
-When you call the component _(<Alert data={this.state.alert}/>)_ you can pass some props to costum as you want.
+When you call the component (`<Alert data={this.state.alert}/>`) you can pass some props to costum as you want.
 
 - A className 
 `<Alert data={this.state.alert} className='alert-custom'/>`
@@ -130,7 +131,7 @@ The default style is this
 
 The style is in the file _"alert.css"_ feel free to change it or use your own style using the className property.
 
-In the same file (alert.css) you can find the animation of the alert, you can change it or use your own animation. The animation we use is by _Animista_, you can find it in the link below:
+In the same file (alert.css) you can find the animation of the alert, you can change it or use your own animation. The animations I use is by _Animista_, you can find it in the link below:
 https://animista.net/
 
 Only remember to change the className property _"scale-in-center"_ and _"scale-out-center"_, you can find the first in the file _"alert.jsx"_ on _className_ (change the two)
@@ -142,7 +143,7 @@ className={
     : 'alert scale-in-center'
 } 
 ```
-and the second you can find in the function _setAlert()_ on the file _"alert.jsx"_
+and the second you can find in the function _setAlert()_ in the _setTimeout()_ part, on the file _"alert.jsx"_
 ```js
 setTimeout(() => {
     //For animations
