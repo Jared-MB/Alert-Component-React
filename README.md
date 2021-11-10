@@ -9,7 +9,7 @@ It consists of a container (where is the alert located), the alert code (file or
 
 ### Import it
 
-Import the component in your proyect with the name _"Alert"_ or as you want name it.
+Import the component in your proyect with the name _"Alert"_ or as you want to name it.
 
 `import Alert from './Alert.jsx';`
 
