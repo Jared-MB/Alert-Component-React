@@ -95,8 +95,11 @@ The default color is red _(#cc3300)_ so you don't need to write the second param
 When you call the component (`<Alert data={this.state.alert}/>`) you can pass some props to costum as you want.
 
 - A className 
+
 `<Alert data={this.state.alert} className='alert-custom'/>`
+
 - A style
+
 `<Alert data={this.state.alert} style={{backgroundColor: '#cc3300'}}/>`
 
 Remember the style is an object, so you can pass a variable to the style, for example:
