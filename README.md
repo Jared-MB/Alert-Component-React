@@ -107,9 +107,9 @@ Remember the style is an object, so you can pass a variable to the style, for ex
 ```js
 render(){
     const style = {
-    backgroundColor: '#cc3300',
-    fontSize: '1.5rem'
-    color : '#000'
+        backgroundColor: '#cc3300',
+        fontSize: '1.5rem',
+        color : '#000'
     }
     return (
         <div className='container'>
