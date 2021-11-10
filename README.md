@@ -44,14 +44,16 @@ setAlert = (msg, type = '') => {
         //it can cause an error, so it as a try - catch to not mess up the page
         try {
             alert.classList.add('scale-out-center');
-            //Clear alert values
-            this.setState({
-                alert : {
-                    show : false,
-                    msg : '',
-                    type : ''
-                }
-            })
+            //Clear alert values after the animation finishes
+            setTimeout(() => {
+                this.setState({
+                    alert : {
+                        show : false,
+                        msg : '',
+                        type : ''
+                    }
+                })
+            },250)
         }
         catch(err){}
     }, 5000)
@@ -155,7 +157,8 @@ setTimeout(() => {
     try {
         //This className is for an "exit" animation
         alert.classList.add('scale-out-center');
-        const closeAlert = setInterval(() => {
+        //Clear alert values after the animation finishes
+        setTimeout(() => {
             this.setState({
                 alert : {
                     show : false,
@@ -164,9 +167,6 @@ setTimeout(() => {
                 }
             })
         },250)
-        setTimeout(() => {
-            clearInterval(closeAlert);
-        }, 5000)
     }
     catch(err){}
 }, 5000)

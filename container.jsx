@@ -33,7 +33,8 @@ export default class container extends Component {
             const alert = document.querySelector('.scale-in-center');
             try {
                 alert.classList.add('scale-out-center');
-                const closeAlert = setInterval(() => {
+                //Clear alert values after the animation finishes
+                setTimeout(() => {
                     this.setState({
                         alert : {
                             show : false,
@@ -42,9 +43,6 @@ export default class container extends Component {
                         }
                     })
                 },250)
-                setTimeout(() => {
-                    clearInterval(closeAlert);
-                }, 5000)
             }
             catch(err){}
         }, 5000)
