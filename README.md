@@ -1,11 +1,11 @@
 # Alert Component using React
-This is an alert component using React with classes that I made for a proyect I'm working on and maybe it can help you to use in your proyect or you can give me a feedback.
+This is an custom alert component using React with classes that I made for a proyect I'm working on and maybe it can help you to use in your proyect or you can give me a feedback.
 ## How do I configure it?
 
 ### Requirements
 It consists of a container (where is the alert located), the alert code (file or in the same container) and the css, feel free to edit as you like.
 
-The files _alert.jsx_ and _alert.css_ have to be in the same directory.
+**The files _alert.jsx_ and _alert.css_ have to be in the same directory.**
 
 ### Import it
 
